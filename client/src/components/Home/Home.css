@@ -1,0 +1,362 @@
+.container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  width: 50%;
+  position: relative;
+}
+
+.area1 {
+  top: 10px;
+  left: 54px;
+  width: 480px;
+  height: 542px;
+  opacity: 1;
+  position: absolute;
+}
+
+.img {
+  top: 69px;
+  left: 54px;
+  width: 98px;
+  height: 43px;
+  position: absolute;
+  background: transparent url("logo.png") 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.text-container {
+  position: relative;
+}
+
+.text {
+  top: 115px;
+  left: 103px;
+  width: 271px;
+  height: 132px;
+  text-align: left;
+  font: normal normal 300 30px/44px Heebo;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+  position: absolute;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-area {
+  position: inherit;
+  top: -50px;
+}
+
+.input-container label {
+  top: 395px;
+  left: 110px;
+  width: 80px;
+  height: 24px;
+  text-align: left;
+  font: normal;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+  position: absolute;
+}
+
+.input {
+  top: 420px;
+  left: 103px;
+  width: 300px;
+  height: 43px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  border: none;
+  opacity: 1;
+  position: absolute;
+}
+
+input[type="text"]::placeholder {
+  padding-left: 10px;
+}
+
+.btn {
+  top: 430px;
+  left: 325px;
+  width: 69px;
+  height: 27px;
+  text-align: center;
+  font: normal;
+  font-family: "Heebo", sans-serif;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  position: absolute;
+  background: #046b3b 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+}
+
+.error {
+  top: 430px;
+  left: 105px;
+  width: 200px;
+  position: absolute;
+  color: red;
+  font-size: 15px;
+}
+
+.details {
+  position: absolute;
+  top: 500px;
+  left: 107px;
+  height: 40px;
+  text-align: left;
+  font: normal;
+  font-family: "Heebo";
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+  display: flex;
+}
+
+.lat_lon-container {
+  display: flex;
+  justify-content: space-between;
+  width: 197px;
+}
+
+.date {
+  width: 250px;
+  top: 22px;
+  position: absolute;
+}
+
+.right {
+  width: 50%;
+  position: relative;
+}
+
+.first-square {
+  top: 54px;
+  left: 43px;
+  width: 600px;
+  height: 500px;
+  background: #dde4e6 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  position: absolute;
+}
+
+.inner-square {
+  top: 50px;
+  left: 85px;
+  width: 335px;
+  height: 414px;
+  background: #27737d 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+  opacity: 1;
+  position: absolute;
+}
+
+.details-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.cityname {
+  font: normal normal normal 26px/26px Heebo;
+  letter-spacing: 0px;
+  color: #e8f1f2;
+  opacity: 1;
+}
+
+.countryname {
+  font: normal normal 300 22px/22px Heebo;
+  letter-spacing: 0px;
+  color: #a8c6cb;
+  opacity: 1;
+}
+
+.details-1-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.celsius {
+  position: absolute;
+  top: 0px;
+  left: 208px;
+  width: 10px;
+  height: 10px;
+  border: 10px solid #efefef;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.degree {
+  font-size: 100px;
+  color: #ffffff;
+  letter-spacing: -10px;
+  opacity: 1;
+  margin: 0px 0px -10px -15px;
+}
+
+.weather {
+  font: normal normal 200 20px/20px Heebo;
+  letter-spacing: 0px;
+  color: #e8f1f2;
+  opacity: 1;
+}
+
+.row {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.precip {
+  font: normal normal 300 20px/30px Heebo;
+  letter-spacing: 0px;
+  color: #e8f1f2;
+  opacity: 1;
+}
+
+.precip span {
+  font: normal 15px/20px Heebo;
+}
+
+.filterForecast {
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast_time {
+  font: normal normal 300 18px/22px Heebo;
+  letter-spacing: 0px;
+  color: #a8c6cb;
+  opacity: 1;
+}
+
+.forecast_temp {
+  font: normal normal medium 18px/22px Heebo;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.localtime {
+  font: normal normal 300 18px/22px Heebo;
+  letter-spacing: 0px;
+  color: #a8c6cb;
+  opacity: 1;
+}
+
+/* For mobile devices */
+
+@media screen and (max-width: 568px) {
+  .container {
+    height: 20px;
+    display: flex;
+    width: 20px;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: -100px;
+  }
+
+  .left {
+    position: relative;
+    width: 100%;
+    height: 100px;
+  }
+
+  .area1 {
+    top: -40px;
+    left: 54px;
+    opacity: 1;
+    position: absolute;
+  }
+
+  .right {
+    position: relative;
+    top: 550px;
+    height: 1000px;
+  }
+
+  .text {
+    position: absolute;
+    top: 90px;
+    font-size: 35px;
+    width: 320px;
+    text-align: left;
+  }
+
+  .input-container label {
+    top: 330px;
+    left: 110px;
+    width: 150px;
+    height: 24px;
+    text-align: left;
+    font: bold;
+    font-size: 26px;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    position: absolute;
+  }
+
+  .input {
+    top: 380px;
+    left: 103px;
+    width: 330px;
+    height: 43px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    border: none;
+    opacity: 1;
+    position: absolute;
+  }
+
+  .btn {
+    top: 390px;
+    left: 345px;
+    width: 69px;
+    height: 27px;
+    text-align: center;
+    font: normal;
+    font-family: "Heebo", sans-serif;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    position: absolute;
+    background: #046b3b 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+  }
+
+  .first-square {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    height: 900px;
+    max-width: 500px;
+  }
+
+  .inner-square {
+    top: 50px;
+    left: 130px;
+    width: 335px;
+    height: 414px;
+    background: #27737d 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    opacity: 1;
+    position: absolute;
+  }
+}
