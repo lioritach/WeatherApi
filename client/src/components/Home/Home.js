@@ -21,8 +21,8 @@ const Home = () => {
         }),
       });
       setError(false);
-      setLocation(res.data.location);
-      setCurrent(res.data.current);
+      setLocation(res?.data?.location);
+      setCurrent(res?.data?.current);
       setForecast(res?.data?.forecast?.forecastday[0]);
     } catch (err) {
       setError(true);
@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    let fTime = location.localtime.substring(11, 16);
+    let fTime = location.localtime?.substring(11, 16);
     let forecast_time = forecast?.hour?.map((item) => {
       if (
         fTime[0] === "6" ||
@@ -42,15 +42,15 @@ const Home = () => {
       }
       return (
         item.time.substring(11, 16) > fTime && {
-          time: item.time.substring(11, 16),
-          temp: item.temp_c,
+          time: item.time?.substring(11, 16),
+          temp: item?.temp_c,
         }
       );
     });
 
     let forecast_filter = forecast_time?.filter(Boolean);
     setfilteredForecastTime(forecast_filter);
-  }, [forecast, location.localtime]);
+  }, [forecast, location?.localtime]);
 
   useEffect(() => {
     const defaultData = async () => {
@@ -66,8 +66,8 @@ const Home = () => {
             }),
           }
         );
-        setLocation(res.data.location);
-        setCurrent(res.data.current);
+        setLocation(res?.data?.location);
+        setCurrent(res?.data?.current);
         setForecast(res?.data?.forecast?.forecastday[0]);
       }
     };
@@ -109,10 +109,10 @@ const Home = () => {
 
           <div className="details">
             <div className="lat_lon-container">
-              <p>latitude {location.lat}</p>
-              <p>latitude {location.lon}</p>
+              <p>latitude {location?.lat}</p>
+              <p>latitude {location?.lon}</p>
             </div>
-            <p className="date">accurate to {location.localtime}</p>
+            <p className="date">accurate to {location?.localtime}</p>
           </div>
         </div>
       </div>
@@ -121,9 +121,9 @@ const Home = () => {
         <div className="first-square">
           <div className="inner-square">
             <div className="details-1">
-              <span className="cityname">{location.name}</span>
-              <span className="countryname">{location.country}</span>
-              <span className="localtime">{location.localtime}</span>
+              <span className="cityname">{location?.name}</span>
+              <span className="countryname">{location?.country}</span>
+              <span className="localtime">{location?.localtime}</span>
             </div>
 
             <div className="details-1">
@@ -132,7 +132,7 @@ const Home = () => {
                 <span className="degree">
                   {current?.temp_c && Math.round(current?.temp_c)}
                 </span>
-                <span className="weather">{current.condition?.text}</span>
+                <span className="weather">{current?.condition?.text}</span>
               </div>
             </div>
 
@@ -154,10 +154,10 @@ const Home = () => {
                 {filteredForecastTime?.map((item, i) => {
                   return (
                     i < 5 && (
-                      <div className="filterForecast">
-                        <span className="forecast_time">{item.time}</span>
+                      <div className="filterForecast" key={i}>
+                        <span className="forecast_time">{item?.time}</span>
                         <span className="forecast_temp">
-                          {Math.round(item.temp)}
+                          {Math.round(item?.temp)}
                         </span>
                       </div>
                     )
